@@ -1,0 +1,15 @@
+const ExpenseDate = ({ date }) => {
+  const month = date.toLocaleString("en-US", { month: "long" });
+  const day = date.toLocaleString("en-US", { day: "2-digit" });
+  const year = date.getFullYear();
+
+  return (
+    <div className="Date d-flex flex-column justify-content-center align-items-center">
+      <div className="Date__month">{month} </div>
+      <div className="Date__year">{year} </div>
+      <div className="Date__day">{day} </div>
+    </div>
+  );
+};
+
+export default ExpenseDate;
